@@ -1,0 +1,50 @@
+.spec_box1 {
+    -fx-background-color:#61BDF6;
+    -fx-background-radius: 50px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Kanit';
+    -fx-border-radius: 50px;
+    -fx-border-width: 3px;
+    -fx-border-color: white;
+    -fx-opacity: 1.0;
+}
+.spec_box1 .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-opacity: 1.0;
+}
+.spec_box1 .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.spec_box1 .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+.spec_box1 .content{
+    -fx-padding: 20px;
+
+}
+
+
+.spec_box2 {
+    -fx-background-color:white;
+    -fx-background-radius: 50px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Kanit';
+    -fx-border-radius: 50px;
+    -fx-border-width: 3px;
+    -fx-border-color: #61BDF6;
+    -fx-opacity: 1.0;
+}
+.spec_box2 .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-opacity: 1.0;
+}
+.spec_box2 .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.spec_box2 .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+.spec_box2 .content{
+    -fx-padding: 20px;
+
+}

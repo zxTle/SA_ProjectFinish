@@ -1,0 +1,26 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Noto+Sans+Thai:wght@300;400&display=swap');*/
+
+.head{
+    -fx-font-family: 'Barlow';
+}
+
+/*user กรอก input เอง*/
+.field {
+    -fx-font-family: 'Barlow';
+    -fx-font-size: 20px;
+    -fx-background-color: #61BDF6;
+}
+
+/*เลขที่เอกสารที่ระบบจะกรอกอัตโนมัติ*/
+.id-field{
+    -fx-font-family: 'Barlow';
+    -fx-font-size: 28px;
+    -fx-background-color: #61BDF6;
+}
+
+/*สถานะของเอกสาร*/
+.status-field{
+    -fx-font-family: 'Barlow';
+    -fx-font-size: 15px;
+    -fx-opacity: 0.8;
+}

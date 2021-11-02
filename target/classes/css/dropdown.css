@@ -1,0 +1,130 @@
+.tabdown {
+    -fx-background-color : #61BDF6;
+    -fx-mark-color : #081F37;
+    -fx-text-fill: #081F37;
+}
+.tabdown:hover {
+    -fx-background-color : #081F37;
+}
+.tabdown > .label:hover{
+    -fx-text-fill : #61BDF6;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Kanit';
+}
+.tabdown > .label{
+    -fx-text-fill : #081F37;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Kanit';
+}
+.tabdown .menu-item:focused{
+    -fx-background-color : #61BDF6;
+    -fx-background-radius : 10;
+    -fx-font-family: 'Kanit';
+}
+
+.tabdown .menu-item > .label{
+    -fx-background-radius : 20;
+    -fx-background-width : 320;
+    -fx-font-size: 20px;
+    -fx-text-fill : #081F37;
+    -fx-font-family: 'Kanit';
+}
+.tabdown .context-menu{
+    -fx-background-radius : 10;
+    -fx-pref-width : 320;
+    -fx-border-width : 2;
+    -fx-border-radius :10;
+    -fx-border-color : #081F37;
+    -fx-font-family: 'Kanit';
+}
+.tabdown .menu-item:focused > .label{
+    -fx-text-fill : #081F37;
+    -fx-font-family: 'Kanit';
+}
+
+
+.select {
+    -fx-background-color : white;
+    -fx-mark-color : #081F37;
+    -fx-text-fill: #081F37;
+    -fx-border-radius: 50px;
+    -fx-border-width: 3px;
+    -fx-border-color: #61BDF6;
+    -fx-background-radius: 50px;
+}
+.select > .label{
+    -fx-text-fill : #081F37;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Kanit';
+}
+.select .menu-item:focused{
+    -fx-background-color : #61BDF6;
+    -fx-background-radius : 50px;
+    -fx-font-family: 'Kanit';
+}
+
+.select .menu-item > .label{
+    -fx-background-radius : 50px;
+    -fx-background-width : 210;
+    -fx-font-size: 20px;
+    -fx-text-fill :  #081F37;
+    -fx-font-family: 'Kanit';
+}
+.select .context-menu{
+    -fx-background-radius : 20px;
+    -fx-pref-width : 210;
+    -fx-border-width : 3px;
+    -fx-border-radius :20px;
+    -fx-border-color : #61BDF6;
+    -fx-font-family: 'Kanit';
+}
+.select .menu-item:focused > .label{
+    -fx-text-fill : #081F37;
+    -fx-font-family: 'Kanit';
+}
+
+.item_text{
+    -fx-text-alignment: center;
+}
+
+
+.select_product {
+    -fx-background-color : white;
+    -fx-mark-color : #081F37;
+    -fx-text-fill: #081F37;
+    -fx-border-radius: 50px;
+    -fx-border-width: 3px;
+    -fx-border-color: #61BDF6;
+    -fx-background-radius: 50px;
+}
+.select_product > .label{
+    -fx-text-fill : #081F37;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Kanit';
+}
+.select_product .menu-item:focused{
+    -fx-background-color : #61BDF6;
+    -fx-background-radius : 50px;
+    -fx-font-family: 'Kanit';
+}
+
+.select_product .menu-item > .label{
+    -fx-background-radius : 50px;
+    -fx-background-width : 300;
+    -fx-font-size: 20px;
+    -fx-text-fill :  #081F37;
+    -fx-font-family: 'Kanit';
+}
+.select_product .context-menu{
+    -fx-background-radius : 20px;
+    -fx-pref-width : 300;
+    -fx-border-width : 3px;
+    -fx-border-radius :20px;
+    -fx-border-color : #61BDF6;
+    -fx-font-family: 'Kanit';
+    -fx-max-height: 400px;
+}
+.select_product .menu-item:focused > .label{
+    -fx-text-fill : #081F37;
+    -fx-font-family: 'Kanit';
+}

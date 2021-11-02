@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa_project.controller.InventoryReceiveAndClaimController">
+   <children>
+      <Pane prefHeight="770.0" prefWidth="317.0" style="-fx-background-color: #61BDF6;">
+         <children>
+            <Pane layoutX="25.0" layoutY="19.0" prefHeight="70.0" prefWidth="267.0" style="-fx-background-color: #081F37; -fx-background-radius: 50px;">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="38.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/archive-solid.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="105.0" layoutY="12.0" prefHeight="45.0" prefWidth="123.0" styleClass="position" stylesheets="@css/style.css" text="ฝ่ายคลัง" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="dateLabel" alignment="CENTER" layoutX="48.0" layoutY="137.0" prefHeight="30.0" prefWidth="222.0" styleClass="text" stylesheets="@css/style.css" text="Date">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="59.0" layoutY="208.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #081F37; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="usernameLabel" alignment="CENTER" layoutX="33.0" layoutY="4.0" prefHeight="30.0" prefWidth="134.0" styleClass="text" stylesheets="@css/style.css" text="Username" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="59.0" layoutY="273.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #081F37; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="nameLabel" layoutX="67.0" layoutY="4.0" prefHeight="30.0" prefWidth="114.0" styleClass="normal_font" stylesheets="@css/style.css" text="name" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="32.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user-tie-solid.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="listRQBtn" layoutX="-1.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleSidemenu" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="รายการสินค้าในคลัง">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="createRQBtn" layoutX="-1.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleSidemenu" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="รายการใบเบิก">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="-1.0" layoutY="707.0" mnemonicParsing="false" onAction="#handleLogOutBtn" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="ออกจากระบบ">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="purchaseProductBtn" layoutX="-1.0" layoutY="489.0" mnemonicParsing="false" onAction="#handleSidemenu" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="สั่งซื้อสินค้าเข้าคลัง">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <MenuButton fx:id="receiveProductBtn" alignment="CENTER" layoutY="553.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="320.0" styleClass="tabdown" stylesheets="@css/dropdown.css" text="รับสินค้าเข้าคลัง" textAlignment="CENTER">
+               <items>
+                  <MenuItem fx:id="receiveMenuBtn" mnemonicParsing="false" onAction="#handleSidemenu" text="รับสินค้า" />
+                  <MenuItem fx:id="claimsMenuBtn" mnemonicParsing="false" onAction="#handleSidemenu" text="การเคลม" />
+               </items>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Pane fx:id="claimList" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="16.0" prefHeight="47.0" prefWidth="248.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label alignment="CENTER" layoutX="24.0" layoutY="5.0" prefHeight="30.0" prefWidth="200.0" styleClass="show_label" stylesheets="@css/style.css" text="รายการใบเคลม">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="searchClaim" layoutX="705.0" layoutY="16.0" prefHeight="47.0" prefWidth="248.0" promptText="ค้นหาใบเคลม.." style="-fx-border-color: #61BDF6; -fx-border-width: 3px; -fx-border-radius: 50px; -fx-background-radius: 50px;" styleClass="field" stylesheets="@css/style.css">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="claimsTable" layoutY="76.0" onMouseClicked="#tableRowOnMouseClick" prefHeight="690.0" prefWidth="970.0" styleClass="table" stylesheets="@css/table.css">
+               <columns>
+                  <TableColumn fx:id="rtNumCol" prefWidth="332.0" text="เลขที่ใบเคลม" />
+                  <TableColumn fx:id="inNumCol" prefWidth="414.39996337890625" text="เลขที่ใบรับของ" />
+                  <TableColumn fx:id="rtStatus" prefWidth="223.2000732421875" text="สถานะ" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="claimDetails" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="31.0" prefHeight="67.0" prefWidth="577.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="claimNum" layoutX="78.0" layoutY="9.0" prefHeight="50.0" prefWidth="433.0" styleClass="position" stylesheets="@css/style.css" text="เลขที่ใบเคลม : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="30.0" layoutX="37.0" layoutY="15.0">
+                     <image>
+                        <Image url="@image/file-excel-solid.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="cBackBtn" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="778.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleTop" prefHeight="47.0" prefWidth="107.0" styleClass="btn-top" stylesheets="@css/button.css" text="กลับ" textFill="#081f37">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <TableView fx:id="claimListTb" layoutY="225.0" prefHeight="549.0" prefWidth="970.0" styleClass="table" stylesheets="@css/table.css">
+               <columns>
+                  <TableColumn fx:id="itemNumc" prefWidth="54.666656494140625" text="ลำดับ" />
+                  <TableColumn fx:id="productc" prefWidth="266.9333190917969" text="สินค้า" />
+                  <TableColumn fx:id="desC" prefWidth="323.19989013671875" text="คุณสมบัติ" />
+                  <TableColumn fx:id="qtyC" prefWidth="68.0" text="จำนวน&#10;เคลม" />
+                  <TableColumn fx:id="reasonC" prefWidth="262.39990234375" text="หมายเหตุ" />
+               </columns>
+            </TableView>
+            <Pane layoutX="55.0" layoutY="142.0" prefHeight="47.0" prefWidth="297.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="inNumc" layoutX="17.0" layoutY="1.0" prefHeight="45.0" prefWidth="284.0" styleClass="show_label" stylesheets="@css/style.css" text="เลขที่ใบรับของ : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="claimBtn" layoutX="649.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleTop" styleClass="btn-top" stylesheets="@css/button.css" text="เคลมเสร็จสิ้น" />
+         </children>
+      </Pane>
+      <Pane fx:id="receiveList" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="16.0" prefHeight="47.0" prefWidth="248.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label alignment="CENTER" layoutX="24.0" layoutY="6.0" prefHeight="30.0" prefWidth="200.0" styleClass="show_label" stylesheets="@css/style.css" text="รายการใบรับของ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="searchReceive" layoutX="589.0" layoutY="16.0" prefHeight="47.0" prefWidth="248.0" promptText="ค้นหาใบรับของ.." style="-fx-border-color: #61BDF6; -fx-border-width: 3px; -fx-border-radius: 50px; -fx-background-radius: 50px;" styleClass="field" stylesheets="@css/style.css">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="InTb" layoutY="76.0" onMouseClicked="#tableRowOnMouseClickReceiveFrom" prefHeight="691.0" prefWidth="970.0" styleClass="table" stylesheets="@css/table.css">
+               <columns>
+                  <TableColumn fx:id="inNumT" prefWidth="182.0" text="เลขที่ใบรับของ" />
+                  <TableColumn fx:id="prNumT" prefWidth="207.0" text="เลขที่ใบสั่งซื้อ" />
+                  <TableColumn fx:id="inDateT" prefWidth="200.0" text="วันที่รับของ" />
+                  <TableColumn fx:id="empReceive" prefWidth="380.0" text="ผู้รับของ" />
+               </columns>
+            </TableView>
+            <Button fx:id="backRBtn" alignment="CENTER" layoutX="847.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleTop" prefHeight="47.0" prefWidth="87.0" styleClass="btn-top" stylesheets="@css/button.css" text="กลับ" textFill="#081f37">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="receivePage" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="31.0" prefHeight="67.0" prefWidth="577.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="28.0" layoutY="16.0">
+                     <image>
+                        <Image url="@image/dolly-solid.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="inNo" layoutX="96.0" layoutY="9.0" prefHeight="50.0" prefWidth="433.0" styleClass="position" stylesheets="@css/style.css" text="เลขที่ใบรับของ : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="inConfirm" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="654.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleInConfirm" prefHeight="47.0" prefWidth="107.0" styleClass="btn-top" stylesheets="@css/button.css" text="รับของ" textFill="#081f37">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <TableView fx:id="inPdTb" editable="true" layoutY="330.0" prefHeight="444.0" prefWidth="970.0" styleClass="table" stylesheets="@css/table.css">
+               <columns>
+                  <TableColumn fx:id="itemIn" prefWidth="104.0" text="ลำดับ" />
+                  <TableColumn fx:id="productIn" prefWidth="245.0" text="สินค้า" />
+                  <TableColumn fx:id="desIn" prefWidth="283.0" text="คุณสมบัติ" />
+                  <TableColumn fx:id="qtyPr" prefWidth="127.0" text="จำนวนสั่งซื้อ" />
+                  <TableColumn fx:id="receiveIn" prefWidth="131.0" text="จำนวนรับ" />
+                  <TableColumn fx:id="scrapC" prefWidth="79.0" text="เสีย" />
+               </columns>
+            </TableView>
+            <Pane layoutX="55.0" layoutY="129.0" prefHeight="47.0" prefWidth="340.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="prNo" layoutX="23.0" layoutY="1.0" prefHeight="45.0" prefWidth="297.0" styleClass="show_label" stylesheets="@css/style.css" text="เลขที่ใบสั่งซื้อ : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="55.0" layoutY="195.0" prefHeight="47.0" prefWidth="340.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="inDueDate" layoutX="22.0" layoutY="1.0" prefHeight="45.0" prefWidth="297.0" styleClass="show_label" stylesheets="@css/style.css" text="วันกำหนดรับ : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="448.0" layoutY="195.0" prefHeight="47.0" prefWidth="340.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="inDate" layoutX="21.0" layoutY="1.0" prefHeight="45.0" prefWidth="308.0" styleClass="show_label" stylesheets="@css/style.css" text="วันที่รับของ : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="inClose" layoutX="778.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleTop" prefHeight="47.0" prefWidth="107.0" styleClass="btn-top" stylesheets="@css/button.css" text="ปิด">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/window-close-regular.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="448.0" layoutY="129.0" prefHeight="47.0" prefWidth="340.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label layoutX="162.0" layoutY="1.0" prefHeight="45.0" prefWidth="159.0" styleClass="show_label" stylesheets="@css/style.css">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="receiver" layoutX="27.0" layoutY="1.0" prefHeight="45.0" prefWidth="297.0" styleClass="show_label" stylesheets="@css/style.css" text="ผู้รับของ : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="purchaseList" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="16.0" prefHeight="47.0" prefWidth="248.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label alignment="CENTER" layoutX="24.0" layoutY="9.0" prefHeight="30.0" prefWidth="200.0" styleClass="text" stylesheets="@css/style.css" text="รายการใบสั่งซื้อสินค้า">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField fx:id="searchText" layoutX="577.0" layoutY="16.0" prefHeight="47.0" prefWidth="248.0" promptText="ค้นหาใบสั่งซื้อ" style="-fx-border-color: #61BDF6; -fx-border-width: 3px; -fx-border-radius: 50px; -fx-background-radius: 50px;" styleClass="field" stylesheets="@css/style.css">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="viewReceiveBtn" alignment="CENTER" layoutX="840.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleTop" prefHeight="47.0" prefWidth="116.0" styleClass="btn-top" stylesheets="@css/button.css" text="ดูใบรับของ" textFill="#081f37">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <TableView fx:id="prFormTable" layoutY="76.0" onMouseClicked="#tableRowOnMouseClickToReceive" prefHeight="701.0" prefWidth="970.0" styleClass="table" stylesheets="@css/table.css">
+               <columns>
+                  <TableColumn fx:id="prNum" prefWidth="148.26669311523438" text="เลขที่ใบสั่งซื้อ" />
+                  <TableColumn fx:id="prDate" prefWidth="241.33331298828125" text="วันที่ออกใบสั่งซื้อ" />
+                  <TableColumn fx:id="prEmp" prefWidth="208.53326416015625" text="ผู้ออกใบสั่งซื้อ" />
+                  <TableColumn fx:id="prDuedate" prefWidth="202.666748046875" text="วันกำหนดรับ" />
+                  <TableColumn fx:id="prStatus" prefWidth="167.4664306640625" text="สถานะ" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

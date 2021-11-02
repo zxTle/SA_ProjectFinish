@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa_project.controller.InventoryProductController">
+   <children>
+      <Pane prefHeight="770.0" prefWidth="317.0" style="-fx-background-color: #61BDF6;">
+         <children>
+            <Pane layoutX="25.0" layoutY="19.0" prefHeight="70.0" prefWidth="267.0" style="-fx-background-color: #081F37; -fx-background-radius: 50px;">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="38.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/archive-solid.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="105.0" layoutY="12.0" prefHeight="45.0" prefWidth="123.0" styleClass="position" stylesheets="@css/style.css" text="ฝ่ายคลัง" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="dateLabel" alignment="CENTER" layoutX="48.0" layoutY="137.0" prefHeight="30.0" prefWidth="222.0" styleClass="text" stylesheets="@css/style.css" text="Date">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="59.0" layoutY="208.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #081F37; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="usernameLabel" alignment="CENTER" layoutX="33.0" layoutY="4.0" prefHeight="30.0" prefWidth="134.0" styleClass="text" stylesheets="@css/style.css" text="Username" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="59.0" layoutY="273.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #081F37; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="nameLabel" layoutX="67.0" layoutY="4.0" prefHeight="30.0" prefWidth="114.0" styleClass="normal_font" stylesheets="@css/style.css" text="name" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="32.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user-tie-solid.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="listRQBtn" layoutX="-1.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleSidemenu" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="รายการสินค้าในคลัง">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="createRQBtn" layoutX="-1.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleSidemenu" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="รายการใบเบิก">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="-1.0" layoutY="707.0" mnemonicParsing="false" onAction="#handleLogOutBtn" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="ออกจากระบบ">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="purchaseProductBtn" layoutX="-1.0" layoutY="489.0" mnemonicParsing="false" onAction="#handleSidemenu" prefHeight="63.0" prefWidth="320.0" styleClass="menu" stylesheets="@css/button.css" text="สั่งซื้อสินค้าเข้าคลัง">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <MenuButton fx:id="receiveProductBtn" alignment="CENTER" layoutY="553.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="320.0" styleClass="tabdown" stylesheets="@css/dropdown.css" text="รับสินค้าเข้าคลัง" textAlignment="CENTER">
+              <items>
+                <MenuItem fx:id="receiveMenuBtn" mnemonicParsing="false" onAction="#handleSidemenu" text="รับสินค้า" />
+                <MenuItem fx:id="claimsMenuBtn" mnemonicParsing="false" onAction="#handleSidemenu" text="การเคลม" />
+              </items>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Pane fx:id="editProductPage" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="45.0" prefHeight="67.0" prefWidth="466.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50;">
+               <children>
+                  <Label fx:id="productCode" layoutX="97.0" layoutY="12.0" prefHeight="45.0" prefWidth="141.0" styleClass="position" stylesheets="@css/style.css" text="รหัสสินค้า :" />
+                  <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="30.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/tags-solid.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="productID" layoutX="238.0" layoutY="14.0" styleClass="position" stylesheets="@css/style.css" text="Label" />
+               </children>
+            </Pane>
+            <Pane layoutX="57.0" layoutY="152.0" prefHeight="47.0" prefWidth="462.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label layoutX="35.0" layoutY="5.0" prefHeight="36.0" prefWidth="113.0" styleClass="show_label" stylesheets="@css/style.css" text="ชื่อสินค้า :" />
+                  <TextField fx:id="productName" disable="true" layoutX="140.0" layoutY="2.0" prefHeight="37.0" prefWidth="265.0" promptText="ชื่อสินค้า" style="-fx-background-radius: 50px; -fx-background-color: #61BDF6;" styleClass="show_field" stylesheets="@css/style.css" text="ชื่อสินค้า" />
+               </children>
+            </Pane>
+            <Pane layoutX="57.0" layoutY="228.0" prefHeight="47.0" prefWidth="462.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="productType" layoutX="35.0" layoutY="5.0" prefHeight="36.0" prefWidth="150.0" styleClass="show_label" stylesheets="@css/style.css" text="ประเภทสินค้า : " />
+                  <Label fx:id="productType" layoutX="185.0" layoutY="6.0" styleClass="show_label" stylesheets="@css/style.css" text="Label" />
+               </children>
+            </Pane>
+            <Pane layoutX="57.0" layoutY="306.0" prefHeight="47.0" prefWidth="167.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label layoutX="30.0" layoutY="4.0" prefHeight="36.0" prefWidth="141.0" styleClass="show_label" stylesheets="@css/style.css" text="คุณสมบัติ :" />
+               </children>
+            </Pane>
+            <TextArea fx:id="productSpec" disable="true" layoutX="57.0" layoutY="384.0" prefHeight="294.0" prefWidth="649.0" styleClass="spec_box1" stylesheets="@css/textarea.css" text="คุณสมบัติสินค้า" wrapText="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextArea>
+            <Button fx:id="EditBtn" layoutX="570.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditPageClick" prefHeight="47.0" prefWidth="125.0" styleClass="btn-top" stylesheets="@css/button.css" text="แก้ไข">
+               <graphic>
+                  <ImageView fx:id="icon" fitHeight="28.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/pencil-alt-solid.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BackBtn" layoutX="712.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="47.0" prefWidth="85.0" styleClass="btn-top" stylesheets="@css/button.css" text="กลับ" />
+         </children>
+      </Pane>
+      <Pane fx:id="createProductPage" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <Pane layoutX="55.0" layoutY="45.0" prefHeight="67.0" prefWidth="466.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50;">
+               <children>
+                  <Label fx:id="productCode1" layoutX="97.0" layoutY="12.0" prefHeight="45.0" prefWidth="329.0" styleClass="position" stylesheets="@css/style.css" text="รหัสสินค้า :" />
+                  <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="30.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/tags-solid.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="57.0" layoutY="152.0" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label layoutX="35.0" layoutY="5.0" prefHeight="36.0" prefWidth="113.0" styleClass="show_label" stylesheets="@css/style.css" text="ชื่อสินค้า :" />
+               </children>
+            </Pane>
+            <Pane layoutX="57.0" layoutY="228.0" prefHeight="47.0" prefWidth="199.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label layoutX="35.0" layoutY="5.0" prefHeight="36.0" prefWidth="150.0" styleClass="show_label" stylesheets="@css/style.css" text="ประเภทสินค้า : " />
+               </children>
+            </Pane>
+            <Pane layoutX="57.0" layoutY="306.0" prefHeight="47.0" prefWidth="167.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
+               <children>
+                  <Label layoutX="30.0" layoutY="4.0" prefHeight="36.0" prefWidth="141.0" styleClass="show_label" stylesheets="@css/style.css" text="คุณสมบัติ :" />
+               </children>
+            </Pane>
+            <TextArea fx:id="desField" layoutX="57.0" layoutY="384.0" prefHeight="294.0" prefWidth="649.0" promptText="คุณสมบัติ.." styleClass="spec_box2" stylesheets="@css/textarea.css" wrapText="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextArea>
+            <Button fx:id="addItemBtm" layoutX="542.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleAddItemBtn" prefHeight="47.0" prefWidth="101.0" styleClass="btn-top" stylesheets="@css/button.css" text="เพิ่ม" />
+            <TextField fx:id="pNameField" layoutX="238.0" layoutY="152.0" prefHeight="49.0" prefWidth="269.0" promptText="ชือสินค้า.." stylesheets="@css/style.css">
+               <styleClass>
+                  <String fx:value="field_style" />
+                  <String fx:value="field" />
+               </styleClass>
+            </TextField>
+            <Button fx:id="cancelAddProductBtn" layoutX="656.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCancelAddProductBtn" prefHeight="47.0" prefWidth="125.0" styleClass="btn-top" stylesheets="@css/button.css" text="ละทิ้ง">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/window-close-regular.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <MenuButton fx:id="typeChoice" layoutX="304.0" layoutY="227.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="253.0" styleClass="select_product" stylesheets="@css/dropdown.css" text="ประเภท" />
+         </children>
+      </Pane>
+      <Pane fx:id="productList" layoutX="317.0" layoutY="-2.0" prefHeight="775.0" prefWidth="970.0" style="-fx-background-color: #081F37;">
+         <children>
+            <TextField fx:id="inputSearch" layoutX="543.0" layoutY="15.0" prefHeight="47.0" prefWidth="248.0" promptText="ค้นหาสินค้าในคลัง.." style="-fx-border-color: #61BDF6; -fx-border-width: 3px; -fx-border-radius: 50px; -fx-background-radius: 50px;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="productTable" layoutY="76.0" onMouseClicked="#tableRowOnMouseClick" prefHeight="701.0" prefWidth="970.0" styleClass="table" stylesheets="@css/table.css">
+               <columns>
+                  <TableColumn fx:id="productCodeTb" minWidth="20.0" prefWidth="113.60000610351562" text="รหัสสินค้า" />
+                  <TableColumn fx:id="productNameTb" minWidth="20.0" prefWidth="235.99990844726562" text="ชื่อสินค้า" />
+                  <TableColumn fx:id="productSpecTb" minWidth="20.0" prefWidth="222.39996337890625" text="คุณสมบัติ" />
+                  <TableColumn fx:id="productInTb" minWidth="20.0" prefWidth="121.60003662109375" text="จำนวนในคลัง" />
+                  <TableColumn fx:id="productWantTb" minWidth="20.0" prefWidth="124.0" text="จำนวนขอเบิก" />
+                  <TableColumn fx:id="productAvailTb" minWidth="20.0" prefWidth="157.5999755859375" text="จำนวนคงเหลือ" />
+               </columns>
+            </TableView>
+            <Button fx:id="addProduct" layoutX="810.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleAddProduct" prefHeight="47.0" prefWidth="150.0" styleClass="btn-top" stylesheets="@css/button.css" text="เพิ่มสินค้าใหม่">
+               <font>
+                  <Font size="1.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&display=swap');*/
+.text{
+    -fx-font-family: 'Kanit';
+    -fx-alignment: center;
+}
+.fill{
+    -fx-font-family: 'Kanit';
+    -fx-alignment: center;
+}
+.field{
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 20px;
+}
+
+.head{
+    -fx-font-family: 'Barlow';
+}
+
+.position{
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 30px;
+}
+.normal_font{
+    -fx-font-family: 'Kanit';
+}
+
+.show_label{
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 25px;
+}
+.show_field{
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 20px;
+    -fx-text-fill: #081F37;
+    -fx-opacity: 1.0;
+}
+
+
+.status-field{
+    -fx-background-color: #9AFFDC;
+    -fx-background-radius: 50px;
+}
+
+.field_style{
+    -fx-border-color: #61BDF6;
+    -fx-border-width: 3px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+
+

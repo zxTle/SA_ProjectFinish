@@ -1,0 +1,46 @@
+
+.table {
+    -fx-background-color : #081F37;
+}
+.table .column-header-background {
+    -fx-background-color : #1E549F;
+}
+
+
+.table .column-header-background .label {
+    -fx-background-color : transparent;
+    -fx-text-fill : white;
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 20px;
+    -fx-pref-height: 70px;
+    -fx-text-alignment: center;
+}
+
+.table .column-header{
+    -fx-background-color : transparent;
+}
+.table .table-cell{
+    -fx-text-fill : #61BDF6;
+    -fx-font-family: 'Kanit';
+    -fx-pref-height : 40px;
+    -fx-alignment: center;
+}
+.table-row-cell{
+    -fx-background-color : -fx-table-cell-border-color,  #081F37;
+    -fx-table-cell-border-color : #61BDF6;
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 20;
+}
+
+/*.table-row-cell:odd {*/
+/*    -fx-background-color : -fx-table-cell-border-color , #C6FCE5;*/
+/*    -fx-font-family: 'Bai Jamjuree';*/
+/*    -fx-font-size: 18;*/
+/*}*/
+
+.table-row-cell:hover{
+    -fx-background-color:-fx-table-cell-border-color, rgba(8, 31, 55, 0.8);
+    -fx-table-cell-border-color : #61BDF6;
+    -fx-font-family: 'Kanit';
+    -fx-font-size: 20;
+}
