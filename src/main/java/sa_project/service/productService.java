@@ -110,8 +110,11 @@ public class productService {
             String query = "UPDATE product_stocks SET Qty_onhand = Qty_onhand-"+qty+" WHERE Product_id = "+productId;
             Statement statement = connectDBSales.createStatement();
             statement.executeUpdate(query);
+            query = "UPDATE product_stocks SET Total_qty_req = Total_qty_req-"+qty+" WHERE Product_id = "+productId;
+            statement.executeUpdate(query);
             query = "UPDATE product_stocks SET Qty_forecast = Qty_onhand-Total_qty_req"+" WHERE Product_id = "+productId;
             statement.executeUpdate(query);
+
         }
     }
 
@@ -128,6 +131,7 @@ public class productService {
             statement.executeUpdate(query);
         }
     }
+
 
 
 }

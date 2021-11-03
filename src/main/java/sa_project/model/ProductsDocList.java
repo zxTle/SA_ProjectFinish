@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ProductsDocList {
     private ArrayList<ProductDoc> productList;
 
+
     public ProductsDocList() {
         this.productList = new ArrayList<>();
     }
@@ -77,8 +78,8 @@ public class ProductsDocList {
             if(pr.getBadQty() > 0){
                 pr.setItemNum(i);
                 rtList.addProduct(pr);
+                i++;
             }
-            i++;
         }
         return rtList;
     }

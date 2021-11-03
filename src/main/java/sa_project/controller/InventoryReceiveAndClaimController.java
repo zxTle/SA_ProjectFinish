@@ -276,9 +276,7 @@ public class InventoryReceiveAndClaimController {
                     receiveIn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<ProductDoc, String>>() {
                                                   @Override
                                                   public void handle(TableColumn.CellEditEvent<ProductDoc, String> event) {
-                                                      System.out.println("จำนวนรับ = " + event.getNewValue());
                                                       toReceiveList.toReceive(event.getRowValue().getItemNum(), event.getNewValue());
-                                                      System.out.println(toReceiveList.toList().get(0).getBadQty());
                                                       scrapC.setCellValueFactory(new PropertyValueFactory<>("badQty"));
                                                       inPdTb.refresh();
                                                       receiveIn.setCellValueFactory(new PropertyValueFactory<>("receiveStr"));
@@ -350,6 +348,7 @@ public class InventoryReceiveAndClaimController {
                 stage.showAndWait();
                 initialize();
             }
+            receiveList.toFront();
         }
         else {
            receiveList.toFront();
