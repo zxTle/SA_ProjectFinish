@@ -267,6 +267,7 @@ public class SalesController {
             ReqForm createReq = new ReqForm(rqNo,rqDate,dueDate,"","Waiting",OrderNumInput.getText(),account.getUsername(), account.getName());
             service.addRqForm(createReq);
             service.addRqList(rqNo,createList);
+            productService.updateTotalReq(createList);
             clearForm();
             ReqList.toFront();
             showSuccess(rqNo);

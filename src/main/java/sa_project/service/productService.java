@@ -115,5 +115,19 @@ public class productService {
         }
     }
 
+    public void updateTotalReq(ProductsDocList listProduct) throws SQLException {
+        DatabaseConnection dbConnect = new DatabaseConnection();
+        Connection connectDBSales = dbConnect.getConnection();
+        for(int i = 0;i<listProduct.toList().size();i++){
+            int qty = listProduct.toList().get(i).getQuantity();
+            String productId = "'"+listProduct.toList().get(i).getProductId()+"';";
+            String query = "UPDATE product_stocks SET Total_qty_req = Total_qty_req+"+qty+" WHERE Product_id = "+productId;
+            Statement statement = connectDBSales.createStatement();
+            statement.executeUpdate(query);
+            query = "UPDATE product_stocks SET Qty_forecast = Qty_onhand-Total_qty_req"+" WHERE Product_id = "+productId;
+            statement.executeUpdate(query);
+        }
+    }
+
 
 }
