@@ -242,7 +242,7 @@
                   <TableColumn fx:id="productSpecTb" minWidth="20.0" prefWidth="222.39996337890625" text="คุณสมบัติ" />
                   <TableColumn fx:id="productInTb" minWidth="20.0" prefWidth="121.60003662109375" text="จำนวนในคลัง" />
                   <TableColumn fx:id="productWantTb" minWidth="20.0" prefWidth="124.0" text="จำนวนขอเบิก" />
-                  <TableColumn fx:id="productAvailTb" minWidth="20.0" prefWidth="157.5999755859375" text="จำนวนคงเหลือ" />
+                  <TableColumn fx:id="productAvailTb" minWidth="20.0" prefWidth="157.5999755859375" text="จำนวน&#10;คาดการณ์" />
                </columns>
             </TableView>
             <Button fx:id="addProduct" layoutX="810.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleAddProduct" prefHeight="47.0" prefWidth="150.0" styleClass="btn-top" stylesheets="@css/button.css" text="เพิ่มสินค้าใหม่">

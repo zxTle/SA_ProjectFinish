@@ -16,7 +16,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa_project.controller.InventoryStockOutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa_project.controller.InventoryStockOutController">
    <children>
       <Pane layoutX="-1.0" prefHeight="770.0" prefWidth="317.0" style="-fx-background-color: #61BDF6;">
          <children>
@@ -137,7 +137,7 @@
                   <TableColumn fx:id="description" minWidth="0.0" prefWidth="276.0" text="รายละเอียด" />
                   <TableColumn fx:id="qty" prefWidth="114.0" text="จำนวน&#10;ขอเบิก" />
                   <TableColumn fx:id="inventory" prefWidth="114.0" text="คงคลัง" />
-                  <TableColumn fx:id="productLeft" prefWidth="114.0" text="คงเหลือ" />
+                  <TableColumn fx:id="productLeft" prefWidth="114.0" text="คาดการณ์" />
               </columns>
             </TableView>
             <Pane layoutX="52.0" layoutY="34.0" prefHeight="70.0" prefWidth="614.0" style="-fx-background-color: #61BDF6; -fx-background-radius: 50px;">
